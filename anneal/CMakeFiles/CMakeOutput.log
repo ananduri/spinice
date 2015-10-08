@@ -1,0 +1,335 @@
+The system is: Linux - 2.6.32-431.11.2.el6.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /share/apps/intel/composer_xe_2015/bin/icc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Intel, found in "/home/ananduri/kmc/anneal/CMakeFiles/3.1.0/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /share/apps/intel/composer_xe_2015/bin/icpc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Intel, found in "/home/ananduri/kmc/anneal/CMakeFiles/3.1.0/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3673586885/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3673586885.dir/build.make CMakeFiles/cmTryCompileExec3673586885.dir/build
+gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3673586885.dir/testCCompiler.c.o
+/share/apps/intel/composer_xe_2015/bin/icc    -o CMakeFiles/cmTryCompileExec3673586885.dir/testCCompiler.c.o   -c /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3673586885
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3673586885.dir/link.txt --verbose=1
+/share/apps/intel/composer_xe_2015/bin/icc      CMakeFiles/cmTryCompileExec3673586885.dir/testCCompiler.c.o  -o cmTryCompileExec3673586885 -rdynamic 
+gmake[1]: Leaving directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3928606387/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3928606387.dir/build.make CMakeFiles/cmTryCompileExec3928606387.dir/build
+gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o
+/share/apps/intel/composer_xe_2015/bin/icc    -o CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o   -c /opt/cmake/share/cmake-3.1/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec3928606387
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3928606387.dir/link.txt --verbose=1
+/share/apps/intel/composer_xe_2015/bin/icc     -v CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3928606387 -rdynamic  
+icc version 15.0.2 (gcc version 4.9.0 compatibility)
+/share/apps/intel/composer_xe_2015.2.164/bin/intel64/mcpcom    -mP1OPT_version=15.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.diag -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=490 "-mGLOB_options_string=-v -o cmTryCompileExec3928606387 -rdynamic" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/share/apps/intel/composer_xe_2015.2.164/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/iccekVumras_.s -mIPOPT_activate -mGLOB_em64t -mGLOB_product_id_code=0x22006d91 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mP2OPT_disam_assume_ansi_c -mP2OPT_checked_disam_ansi_alias=TRUE -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mP2OPT_il0_array_sections=TRUE -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=icc0101604589433xHbWmM -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/share/apps/intel/composer_xe_2015.2.164/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/iccslisqvd9w7 -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/iccscriptryRO8d "-mIPOPT_cmdline_link="/usr/lib/../lib64/crt1.o" "/usr/lib/../lib64/crti.o" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o" "-export-dynamic" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-o" "cmTryCompileExec3928606387" "-L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/" "-L/lib/../lib64" "-L/lib/../lib64/" "-L/usr/lib/../lib64" "-L/usr/lib/../lib64/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib64" "-L/usr/lib" "CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o" "-Bdynamic" "-Bstatic" "-limf" "-lsvml" "-lirng" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-ldecimal" "--as-needed" "-Bdynamic" "-lcilkrts" "-lstdc++" "--no-as-needed" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o" "/usr/lib/../lib64/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_icc03rcTt.o -mIPOPT_whole_archive_fixup_file_name=/tmp/iccwarchCjeCKv -mGLOB_linker_version=2.20.51.0.2 -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_driver_tempfile_name=/tmp/icctempfilecQSRpC -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_icc03rcTt.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.c CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/iccalisb9Zu6G -mIPOPT_generated_tempfiles=/tmp/iccelisjtH9HN -mIPOPT_embedded_object_base_name=/tmp/icceobjpCDOjU -mIPOPT_cmdline_link_new_name=/tmp/iccllisSXNtV0
+ld    /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o -export-dynamic --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTryCompileExec3928606387 -L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o -Bdynamic -Bstatic -limf -lsvml -lirng -Bdynamic -lm -Bstatic -lipgo -ldecimal --as-needed -Bdynamic -lcilkrts -lstdc++ --no-as-needed -lgcc -lgcc_s -Bstatic -lirc -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o /usr/lib/../lib64/crtn.o
+gmake[1]: Leaving directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3928606387/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3928606387.dir/build.make CMakeFiles/cmTryCompileExec3928606387.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp']
+  ignore line: [/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/share/apps/intel/composer_xe_2015/bin/icc    -o CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o   -c /opt/cmake/share/cmake-3.1/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec3928606387]
+  ignore line: [/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3928606387.dir/link.txt --verbose=1]
+  ignore line: [/share/apps/intel/composer_xe_2015/bin/icc     -v CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3928606387 -rdynamic  ]
+  ignore line: [icc version 15.0.2 (gcc version 4.9.0 compatibility)]
+  ignore line: [/share/apps/intel/composer_xe_2015.2.164/bin/intel64/mcpcom    -mP1OPT_version=15.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.diag -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=490 "-mGLOB_options_string=-v -o cmTryCompileExec3928606387 -rdynamic" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/share/apps/intel/composer_xe_2015.2.164/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/iccekVumras_.s -mIPOPT_activate -mGLOB_em64t -mGLOB_product_id_code=0x22006d91 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mP2OPT_disam_assume_ansi_c -mP2OPT_checked_disam_ansi_alias=TRUE -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mP2OPT_il0_array_sections=TRUE -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=icc0101604589433xHbWmM -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/share/apps/intel/composer_xe_2015.2.164/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/iccslisqvd9w7 -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/iccscriptryRO8d "-mIPOPT_cmdline_link="/usr/lib/../lib64/crt1.o" "/usr/lib/../lib64/crti.o" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o" "-export-dynamic" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-o" "cmTryCompileExec3928606387" "-L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/" "-L/lib/../lib64" "-L/lib/../lib64/" "-L/usr/lib/../lib64" "-L/usr/lib/../lib64/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib64" "-L/usr/lib" "CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o" "-Bdynamic" "-Bstatic" "-limf" "-lsvml" "-lirng" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-ldecimal" "--as-needed" "-Bdynamic" "-lcilkrts" "-lstdc++" "--no-as-needed" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o" "/usr/lib/../lib64/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_icc03rcTt.o -mIPOPT_whole_archive_fixup_file_name=/tmp/iccwarchCjeCKv -mGLOB_linker_version=2.20.51.0.2 -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_driver_tempfile_name=/tmp/icctempfilecQSRpC -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_icc03rcTt.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.c CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/iccalisb9Zu6G -mIPOPT_generated_tempfiles=/tmp/iccelisjtH9HN -mIPOPT_embedded_object_base_name=/tmp/icceobjpCDOjU -mIPOPT_cmdline_link_new_name=/tmp/iccllisSXNtV0]
+  link line: [ld    /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o -export-dynamic --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTryCompileExec3928606387 -L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o -Bdynamic -Bstatic -limf -lsvml -lirng -Bdynamic -lm -Bstatic -lipgo -ldecimal --as-needed -Bdynamic -lcilkrts -lstdc++ --no-as-needed -lgcc -lgcc_s -Bstatic -lirc -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o /usr/lib/../lib64/crtn.o]
+    arg [ld] ==> ignore
+    arg [/usr/lib/../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3928606387] ==> ignore
+    arg [-L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64] ==> dir [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/lib/../lib64/] ==> dir [/lib/../lib64/]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/../lib64/] ==> dir [/usr/lib/../lib64/]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../]
+    arg [-L/lib64] ==> dir [/lib64]
+    arg [-L/lib/] ==> dir [/lib/]
+    arg [-L/usr/lib64] ==> dir [/usr/lib64]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec3928606387.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-limf] ==> lib [imf]
+    arg [-lsvml] ==> lib [svml]
+    arg [-lirng] ==> lib [irng]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [-Bstatic] ==> ignore
+    arg [-lipgo] ==> lib [ipgo]
+    arg [-ldecimal] ==> lib [decimal]
+    arg [--as-needed] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-lcilkrts] ==> lib [cilkrts]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [--no-as-needed] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc] ==> lib [irc]
+    arg [-lsvml] ==> lib [svml]
+    arg [-Bdynamic] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc_s] ==> lib [irc_s]
+    arg [-Bdynamic] ==> ignore
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o] ==> ignore
+    arg [/usr/lib/../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64] ==> [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/] ==> [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64] ==> [/opt/gnu/gcc/lib64]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/] ==> [/opt/gnu/gcc/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/lib/../lib64/] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/../lib64/] ==> [/usr/lib64]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../] ==> [/opt/gnu/gcc/lib]
+  collapse library dir [/lib64] ==> [/lib64]
+  collapse library dir [/lib/] ==> [/lib]
+  collapse library dir [/usr/lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [imf;svml;irng;m;ipgo;decimal;cilkrts;stdc++;irc;svml;c;irc_s;dl;c]
+  implicit dirs: [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64;/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1;/opt/gnu/gcc/lib64;/lib64;/usr/lib64;/opt/gnu/gcc/lib;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec598066993/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec598066993.dir/build.make CMakeFiles/cmTryCompileExec598066993.dir/build
+gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec598066993.dir/testCXXCompiler.cxx.o
+/share/apps/intel/composer_xe_2015/bin/icpc     -o CMakeFiles/cmTryCompileExec598066993.dir/testCXXCompiler.cxx.o -c /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec598066993
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec598066993.dir/link.txt --verbose=1
+/share/apps/intel/composer_xe_2015/bin/icpc       CMakeFiles/cmTryCompileExec598066993.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec598066993 -rdynamic 
+gmake[1]: Leaving directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2925941838/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2925941838.dir/build.make CMakeFiles/cmTryCompileExec2925941838.dir/build
+gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o
+/share/apps/intel/composer_xe_2015/bin/icpc     -o CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake/share/cmake-3.1/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec2925941838
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2925941838.dir/link.txt --verbose=1
+/share/apps/intel/composer_xe_2015/bin/icpc      -v CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2925941838 -rdynamic  
+icpc version 15.0.2 (gcc version 4.9.0 compatibility)
+/share/apps/intel/composer_xe_2015.2.164/bin/intel64/mcpcom    -mP1OPT_version=15.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.diag -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=490 "-mGLOB_options_string=-v -o cmTryCompileExec2925941838 -rdynamic" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/share/apps/intel/composer_xe_2015.2.164/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/icpcdtJ0M0as_.s -mIPOPT_activate -mGLOB_em64t -mGLOB_product_id_code=0x22006d8e -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mP2OPT_disam_assume_ansi_c -mP2OPT_checked_disam_ansi_alias=TRUE -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mP2OPT_il0_array_sections=TRUE -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=icpc01014059342621cPl0z -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/share/apps/intel/composer_xe_2015.2.164/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/icpcslisXHu8dB -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/icpcscriptVYJjKJ "-mIPOPT_cmdline_link="/usr/lib/../lib64/crt1.o" "/usr/lib/../lib64/crti.o" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o" "-export-dynamic" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-o" "cmTryCompileExec2925941838" "-L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/" "-L/lib/../lib64" "-L/lib/../lib64/" "-L/usr/lib/../lib64" "-L/usr/lib/../lib64/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib64" "-L/usr/lib" "CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o" "-Bdynamic" "-Bstatic" "-limf" "-lsvml" "-lirng" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-ldecimal" "--as-needed" "-Bdynamic" "-lcilkrts" "--no-as-needed" "-lstdc++" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o" "/usr/lib/../lib64/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_icpcZYb86L.o -mIPOPT_whole_archive_fixup_file_name=/tmp/icpcwarchAcsaio -mGLOB_linker_version=2.20.51.0.2 -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_driver_tempfile_name=/tmp/icpctempfileH28VRw -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_icpcZYb86L.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.c CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/icpcalisTgXr92 -mIPOPT_generated_tempfiles=/tmp/icpcelisiEeCFb -mIPOPT_embedded_object_base_name=/tmp/icpceobjmXJMbk -mIPOPT_cmdline_link_new_name=/tmp/icpcllisEJuXHs
+ld    /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o -export-dynamic --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTryCompileExec2925941838 -L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o -Bdynamic -Bstatic -limf -lsvml -lirng -Bdynamic -lm -Bstatic -lipgo -ldecimal --as-needed -Bdynamic -lcilkrts --no-as-needed -lstdc++ -lgcc -lgcc_s -Bstatic -lirc -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o /usr/lib/../lib64/crtn.o
+gmake[1]: Leaving directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2925941838/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2925941838.dir/build.make CMakeFiles/cmTryCompileExec2925941838.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp']
+  ignore line: [/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/share/apps/intel/composer_xe_2015/bin/icpc     -o CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake/share/cmake-3.1/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec2925941838]
+  ignore line: [/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2925941838.dir/link.txt --verbose=1]
+  ignore line: [/share/apps/intel/composer_xe_2015/bin/icpc      -v CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2925941838 -rdynamic  ]
+  ignore line: [icpc version 15.0.2 (gcc version 4.9.0 compatibility)]
+  ignore line: [/share/apps/intel/composer_xe_2015.2.164/bin/intel64/mcpcom    -mP1OPT_version=15.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.diag -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=490 "-mGLOB_options_string=-v -o cmTryCompileExec2925941838 -rdynamic" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/share/apps/intel/composer_xe_2015.2.164/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/icpcdtJ0M0as_.s -mIPOPT_activate -mGLOB_em64t -mGLOB_product_id_code=0x22006d8e -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mP2OPT_disam_assume_ansi_c -mP2OPT_checked_disam_ansi_alias=TRUE -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mP2OPT_il0_array_sections=TRUE -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=icpc01014059342621cPl0z -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/share/apps/intel/composer_xe_2015.2.164/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/icpcslisXHu8dB -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/icpcscriptVYJjKJ "-mIPOPT_cmdline_link="/usr/lib/../lib64/crt1.o" "/usr/lib/../lib64/crti.o" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o" "-export-dynamic" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-o" "cmTryCompileExec2925941838" "-L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/" "-L/lib/../lib64" "-L/lib/../lib64/" "-L/usr/lib/../lib64" "-L/usr/lib/../lib64/" "-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib64" "-L/usr/lib" "CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o" "-Bdynamic" "-Bstatic" "-limf" "-lsvml" "-lirng" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-ldecimal" "--as-needed" "-Bdynamic" "-lcilkrts" "--no-as-needed" "-lstdc++" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o" "/usr/lib/../lib64/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_icpcZYb86L.o -mIPOPT_whole_archive_fixup_file_name=/tmp/icpcwarchAcsaio -mGLOB_linker_version=2.20.51.0.2 -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_driver_tempfile_name=/tmp/icpctempfileH28VRw -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_icpcZYb86L.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.c CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/icpcalisTgXr92 -mIPOPT_generated_tempfiles=/tmp/icpcelisiEeCFb -mIPOPT_embedded_object_base_name=/tmp/icpceobjmXJMbk -mIPOPT_cmdline_link_new_name=/tmp/icpcllisEJuXHs]
+  link line: [ld    /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o -export-dynamic --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTryCompileExec2925941838 -L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64 -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o -Bdynamic -Bstatic -limf -lsvml -lirng -Bdynamic -lm -Bstatic -lipgo -ldecimal --as-needed -Bdynamic -lcilkrts --no-as-needed -lstdc++ -lgcc -lgcc_s -Bstatic -lirc -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o /usr/lib/../lib64/crtn.o]
+    arg [ld] ==> ignore
+    arg [/usr/lib/../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/../lib64/crti.o] ==> ignore
+    arg [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtbegin.o] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2925941838] ==> ignore
+    arg [-L/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64] ==> dir [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/lib/../lib64/] ==> dir [/lib/../lib64/]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/../lib64/] ==> dir [/usr/lib/../lib64/]
+    arg [-L/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../] ==> dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../]
+    arg [-L/lib64] ==> dir [/lib64]
+    arg [-L/lib/] ==> dir [/lib/]
+    arg [-L/usr/lib64] ==> dir [/usr/lib64]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTryCompileExec2925941838.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-limf] ==> lib [imf]
+    arg [-lsvml] ==> lib [svml]
+    arg [-lirng] ==> lib [irng]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [-Bstatic] ==> ignore
+    arg [-lipgo] ==> lib [ipgo]
+    arg [-ldecimal] ==> lib [decimal]
+    arg [--as-needed] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-lcilkrts] ==> lib [cilkrts]
+    arg [--no-as-needed] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc] ==> lib [irc]
+    arg [-lsvml] ==> lib [svml]
+    arg [-Bdynamic] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc_s] ==> lib [irc_s]
+    arg [-Bdynamic] ==> ignore
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/crtend.o] ==> ignore
+    arg [/usr/lib/../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64] ==> [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/] ==> [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64] ==> [/opt/gnu/gcc/lib64]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../../lib64/] ==> [/opt/gnu/gcc/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/lib/../lib64/] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/../lib64/] ==> [/usr/lib64]
+  collapse library dir [/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/../../../] ==> [/opt/gnu/gcc/lib]
+  collapse library dir [/lib64] ==> [/lib64]
+  collapse library dir [/lib/] ==> [/lib]
+  collapse library dir [/usr/lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [imf;svml;irng;m;ipgo;decimal;cilkrts;stdc++;irc;svml;c;irc_s;dl;c]
+  implicit dirs: [/share/apps/intel/composer_xe_2015.2.164/compiler/lib/intel64;/opt/gnu/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.9.1;/opt/gnu/gcc/lib64;/lib64;/usr/lib64;/opt/gnu/gcc/lib;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec3454274301/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3454274301.dir/build.make CMakeFiles/cmTryCompileExec3454274301.dir/build
+gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3454274301.dir/src.c.o
+/share/apps/intel/composer_xe_2015/bin/icc   -DOpenMP_FLAG_DETECTED -qopenmp   -o CMakeFiles/cmTryCompileExec3454274301.dir/src.c.o   -c /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3454274301
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3454274301.dir/link.txt --verbose=1
+/share/apps/intel/composer_xe_2015/bin/icc   -DOpenMP_FLAG_DETECTED -qopenmp   CMakeFiles/cmTryCompileExec3454274301.dir/src.c.o  -o cmTryCompileExec3454274301 -rdynamic 
+gmake[1]: Leaving directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeded with the following output:
+Change Dir: /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTryCompileExec2927588158/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2927588158.dir/build.make CMakeFiles/cmTryCompileExec2927588158.dir/build
+gmake[1]: Entering directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+/opt/cmake/bin/cmake -E cmake_progress_report /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2927588158.dir/src.cxx.o
+/share/apps/intel/composer_xe_2015/bin/icpc    -DOpenMP_FLAG_DETECTED -qopenmp   -o CMakeFiles/cmTryCompileExec2927588158.dir/src.cxx.o -c /home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2927588158
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2927588158.dir/link.txt --verbose=1
+/share/apps/intel/composer_xe_2015/bin/icpc    -DOpenMP_FLAG_DETECTED -qopenmp   CMakeFiles/cmTryCompileExec2927588158.dir/src.cxx.o  -o cmTryCompileExec2927588158 -rdynamic 
+gmake[1]: Leaving directory `/home/ananduri/kmc/anneal/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
