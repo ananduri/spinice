@@ -1,6 +1,6 @@
 #include "spinice.h"
 
-bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy)
+bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy, double* inter, double* spinstated)
 {
 	double r,prob;
 	bool flipped = false;	
@@ -9,7 +9,7 @@ bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spin
 
 	spinstate[spinind] ^= true; //flip spin
 
-	double E1 = getenergy(N,intmat,spinstate);
+	double E1 = getenergy(N,intmat,spinstate,inter,spinstated);
 	
 	if( E1 < E0)
 	{

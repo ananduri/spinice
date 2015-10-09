@@ -15,11 +15,11 @@
 
 double calcacorr(int N, bool* initstate, bool* spinstate);
 
-bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy);
+bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy, double* inter, double* spinstated);
 
 void getacorr(double* acorr, int N, bool* spinstate, double* intmat, double T, int S, int k);
 
-double getenergy(int N, double* intmat, bool* spinstate);
+double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* spinstated);
 
 double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate, double* energy, int k);
 

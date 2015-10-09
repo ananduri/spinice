@@ -57,7 +57,9 @@ int main(int argc, char *argv[])
 		//intialize with shitty RNG
 		for(int j=0;j<N;j++)
 		{
-			timestate[0*N + j] = ((double)rand()/(double)RAND_MAX > 0.5) ? true : false;
+			//timestate[0*N + j] = ((double)rand()/(double)RAND_MAX > 0.5) ? true : false;
+			//timestate[0*N + j] = ((double)rand()/(double)RAND_MAX > 0.5) ? 1 : -1;
+			timestate[0*N + j] = (RanGen_mersenne.Random() > 0.5);
 		}
 	}
 	else//or read in from file
