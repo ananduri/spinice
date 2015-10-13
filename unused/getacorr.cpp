@@ -13,7 +13,6 @@ void getacorr(double* acorr, int N, bool* spinstate, double* intmat, double T, i
 	bool* initstate = (bool*)malloc(N*sizeof(bool));
 
 	//equilibrate first
-	
 	for(int i=0;i<N;i++)
 	{
 		initstate[i] = spinstate[i];

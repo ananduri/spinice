@@ -1,15 +1,15 @@
 #include "spinice.h"
 
-bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy, double* inter, double* spinstated)
+bool flipsingle(CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy, double* inter, double* spinstated)
 {
 	double r,prob;
 	bool flipped = false;	
 
-	double E0 = *energy; 
+	double E0 = *energy; //getenergy(N,intmat,spinstate);
 
 	spinstate[spinind] ^= true; //flip spin
 
-	double E1 = getenergy(N,intmat,spinstate,inter,spinstated);
+	double E1 = getenergy(intmat,spinstate,inter,spinstated);
 	
 	if( E1 < E0)
 	{
@@ -33,6 +33,6 @@ bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spin
 	}
 	
 	*energy = (flipped) ? E1 : E0;
-	
+	//printf("E1-E0: %.3f\n",E1-E0);
 	return flipped;
 }

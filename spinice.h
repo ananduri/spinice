@@ -11,7 +11,7 @@
 #include "randomc.h"
 #include "mkl.h"
 
-//const double schedule[] = {40};
+//const double schedule[] = {40, 
 
 double calcacorr(int N, bool* initstate, bool* spinstate);
 

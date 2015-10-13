@@ -13,20 +13,20 @@ int main(int argc, char *argv[])
 	double start,end;
 	start = omp_get_wtime();
 
-	int cellsize = atoi(argv[1]);
+	//int cellsize = atoi(argv[1]);
 	int S = atoi(argv[2]); //number of mc steps
 	int step = atoi(argv[3]); 
 	double T = strtod(argv[4],NULL);	
 	int label = atoi(argv[5]);
 
-	int N = 16*cellsize*cellsize*cellsize;
+	//int N = 16*cellsize*cellsize*cellsize;
 
 	double* intmat = (double*)malloc(N*N*sizeof(double));
 
 	//load intmat
 	FILE *matstream;
 	char matname[50];
-	sprintf(matname,"Intmat_a%d_r3_k10.bin",cellsize);
+	sprintf(matname,"/home/ananduri/kmc/Intmat_a%d_r3_k10.bin",cellsize);
 
 	matstream = fopen(matname, "rb");
 	fread(intmat, sizeof(double), N*N, matstream);
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 		double dT = 0.5;
 		for (double temp=10;temp>=Tlim;temp-=dT)
 		{
-			evolve(timestate,N,intmat,temp,RanGen_mersenne,label);
+			evolve(timestate,intmat,temp,RanGen_mersenne,label);
 		}	
 
 		//save
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S,label);
+		evolvesave(timestate,intmat,T,RanGen_mersenne,S,label);
 
 		//save
 		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	

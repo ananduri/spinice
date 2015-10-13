@@ -1,18 +1,21 @@
 #include "spinice.h"
 
-double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* spinstated)
+double getenergy(double* intmat, bool* spinstate, double* inter, double* spinstated)
 {
 	//everytime call this guy, have to create+allocate spinstatei and copy over all the memory
+	
+	//double* spinstatei = (double*)malloc(N*sizeof(double));
 	for(int i=0;i<N;i++)
 	{
 		spinstated[i] = (spinstate[i]) ? 1.0 : -1.0; 
 	}
 
+	//double* inter = (double*)malloc(N*sizeof(double)); //allocate this guy once, outside this function?
+	
 	cblas_dgemv(CblasColMajor, CblasNoTrans, N, N, 1.0, intmat, N, spinstated, 1, 0.0, inter, 1);
 
 	double sum2 = cblas_ddot(N, spinstated, 1, inter, 1);
 
-	//to keep using the bool array instead, but no BLAS
 	/*double sum;
 	for(int i=0;i<N;i++)
 	{
@@ -29,6 +32,9 @@ double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* 
 	{
 		sum2 +=	inter[i] * (2.0*spinstate[i] - 1.0);
 	}*/
+
+	//free(inter);
+	//free(spinstatei);
 
 	return sum2;
 }
