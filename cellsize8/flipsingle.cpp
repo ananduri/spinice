@@ -5,7 +5,7 @@ bool flipsingle(CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, 
 	double r,prob;
 	bool flipped = false;	
 
-	double E0 = *energy; //getenergy(N,intmat,spinstate);
+	double E0 = *energy; 
 
 	spinstate[spinind] ^= true; //flip spin
 
@@ -33,6 +33,6 @@ bool flipsingle(CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, 
 	}
 	
 	*energy = (flipped) ? E1 : E0;
-	//printf("E1-E0: %.3f\n",E1-E0);
+	
 	return flipped;
 }

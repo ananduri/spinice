@@ -1,4 +1,1 @@
-for x in {1..40}
-do
-sbatch --export=S=10,step=0,T=10,label=$x submit.sh
-done
+sbatch --export=S=1,step=0,T=8 --array=0 submit.sh

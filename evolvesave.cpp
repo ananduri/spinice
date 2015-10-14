@@ -1,6 +1,6 @@
 #include "spinice.h"
 
-void evolvesave(bool* timestate, int N, double* intmat, double T, CRandomMersenne& RanGen_mersenne, int S, int label)
+void evolvesave(bool* timestate, int N, double* intmat, double T, CRandomMersenne& RanGen_mersenne, int S)
 {
 	double frac, energy;
 
@@ -12,11 +12,12 @@ void evolvesave(bool* timestate, int N, double* intmat, double T, CRandomMersenn
 	
 	for(int i=0;i<S-1;i++)
 	{
-		frac = mcstep(N, RanGen_mersenne, intmat, T, tempstate, &energy, label);
+		frac = mcstep(N, RanGen_mersenne, intmat, T, tempstate, &energy);
+		printf("%.3f\tflipped\n",frac);
 	
 		for(int j=0;j<N;j++)
 		{
-			timestate[(i+1)*S + j] = tempstate[j];
+			timestate[(i+1)*N + j] = tempstate[j]; 
 		}
 	}
 

@@ -13,20 +13,20 @@
 
 //const double schedule[] = {40, 
 
-double calcacorr(int N, bool* initstate, bool* spinstate);
+//double calcacorr(int N, bool* initstate, bool* spinstate);
 
 bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy, double* inter, double* spinstated);
 
-void getacorr(double* acorr, int N, bool* spinstate, double* intmat, double T, int S, int k);
+//void getacorr(double* acorr, int N, bool* spinstate, double* intmat, double T, int S, int k);
 
 double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* spinstated);
 
-double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate, double* energy, int k);
+double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate, double* energy);
 
-void dipassign(double* dip, int m, bool ori);
+//void dipassign(double* dip, int m, bool ori);
 
-void evolve(bool* state, int N, double* intmat, double temp, CRandomMersenne& RanGen_mersene,int label);
+void evolve(bool* state, int N, double* intmat, double temp, CRandomMersenne& RanGen_mersene);
 
-void evolvesave(bool* timestate, int N, double* intmat, double temp, CRandomMersenne& RanGen_mersenne, int S, int label);
+void evolvesave(bool* timestate, int N, double* intmat, double temp, CRandomMersenne& RanGen_mersenne, int S);
 
 #endif /* SPINHEAD_H_ */

@@ -1,6 +1,6 @@
 #include "spinice.h"
 
-double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate, double* energy, int k) {
+double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate, double* energy) {
 	
 	double counter=0;
 	int ind;
@@ -14,7 +14,7 @@ double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T,
 
 	for(int i=0;i<N;i++) 
 	{
-		ind = RanGen_mersenne.IRandom(0,N-1); 
+		ind = RanGen_mersenne.IRandom(0,N-1); //inclusive
 		
 		flip = flipsingle(N,RanGen_mersenne,ind,spinstate,intmat,T,energy, inter, spinstated);
 		
