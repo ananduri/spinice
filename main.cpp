@@ -32,19 +32,31 @@ int main(int argc, char *argv[])
 	fread(intmat, sizeof(double), N*N, matstream);
 	fclose(matstream);
 
-	srand(time(NULL));
+	srand(time(NULL) + label);
 	int seed = rand();
 	CRandomMersenne RanGen_mersenne(seed);
 
 	bool* timestate = (bool*)calloc(S*N,sizeof(bool));
 
 
-	if(step == 0) //start run 
+	if(step == 0 && T >= 2.0) //start run 
 	{
 		for(int j=0;j<N;j++)
 		{
 			timestate[0*N + j] = (RanGen_mersenne.Random() > 0.5);
 		}
+	}
+	if(step == 0 && T < 2.0)
+	{
+		FILE* istream;
+		char iname[100];
+		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.5,cellsize,label,step);
+	
+		istream = fopen(iname,"rb");	
+		fseek(istream, -N*sizeof(bool), SEEK_END); 
+
+		fread(timestate, sizeof(bool), N, istream);
+		fclose(istream);
 	}
 	else//or read in from file
 	{
@@ -63,7 +75,7 @@ int main(int argc, char *argv[])
 	char tname[100];
 	
 	//save each one in here
-	if(step == 0)  //T and S irrelevant for step = 0
+	if(step == 0 && T >= 2.0)  //S irrelevant for step=0; T irrelevant if greater than 2
 	{
 		double Tlim = 2.0;
 		double dT = 0.5;
@@ -74,6 +86,15 @@ int main(int argc, char *argv[])
 
 		//save
 		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,Tlim,cellsize,label,step); 
+		tstream = fopen(tname,"wb");
+		fwrite(timestate,sizeof(bool),S*N,tstream);
+		fclose(tstream);
+	}
+	if(step == 0 && T < 2.0)
+	{
+		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S,label);		
+	
+		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);

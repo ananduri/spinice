@@ -7,4 +7,4 @@
 
 cd /home/ananduri/kmc
 
-anneal/a $cellsize $S $step $T $label
+anneal/a $cellsize $S $step $T $SLURM_ARRAY_TASK_ID
