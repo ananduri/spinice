@@ -4,7 +4,19 @@ void evolve(bool* state, int N, double* intmat, double temp, CRandomMersenne& Ra
 {
 	double frac, energy;
 
-	int tau = 20;
+	int tau;
+	if(temp < 1.5)
+	{
+		tau = 300;
+	}
+	else if((temp >= 1.5) && (temp < 2.0))
+	{
+		tau = 80;
+	}
+	else
+	{
+		tau = 20;
+	}
 
 	for(int i=0;i<tau;i++)	
 	{

@@ -39,18 +39,18 @@ int main(int argc, char *argv[])
 	bool* timestate = (bool*)calloc(S*N,sizeof(bool));
 	
 
-	if(step == 0 && T >= 2.0) //start run 
+	if(step == 0 && T >= 2.0) 
 	{
 		for(int j=0;j<N;j++)
 		{
 			timestate[0*N + j] = (RanGen_mersenne.Random() > 0.5);
 		}
 	}
-	else if(step == 0 && T < 2.0)
+	else if(step == 0 && T < 2.0) 
 	{
 		FILE* istream;
 		char iname[100];
-		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.1,cellsize,label,step); //0.1 increment hardcoded in 
+		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.25,cellsize,label,step); //use 0.25 increment, hardcoded 
 	
 		istream = fopen(iname,"rb");	
 		fseek(istream, -N*sizeof(bool), SEEK_END); 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 		fread(timestate, sizeof(bool), N, istream);
 		fclose(istream);
 	}
-	else//or read in from file
+	else
 	{
 		FILE* istream;
 		char iname[100];
@@ -91,10 +91,13 @@ int main(int argc, char *argv[])
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
 	}
-	else if(step == 0 && T < 2.0)
+	else if(step == 0 && T < 2.0) 
 	{
+		evolve(timestate,N,intmat,T,RanGen_mersenne);
+
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);	
 	
+		//save
 		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
@@ -118,5 +121,6 @@ int main(int argc, char *argv[])
 	printf("cellsize: %d\n\n",cellsize);
 
 	end = omp_get_wtime();
-	printf("time: %5.3f\n",end-start);
+	printf("wall time: %5.3f\n",end-start);
+	printf("in hours: %5.3f\n",(end-start)/3600);
 }
