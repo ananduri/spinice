@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 	bool* timestate = (bool*)calloc(S*N,sizeof(bool));
 	
-
+	//LOAD DATA
 	if(step == 0 && T >= 2.0) 
 	{
 		for(int j=0;j<N;j++)
@@ -71,10 +71,13 @@ int main(int argc, char *argv[])
 		fclose(istream);
 	}
 
+
+	//EVOLVE DATA
+	//double energy = getenergy(N, intmat, timestate); 
+
 	FILE *tstream;
 	char tname[100];
 	
-	//save each one in here
 	if(step == 0 && T >= 2.0)  
 	{
 		double dT = 0.5;
@@ -86,7 +89,7 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
 		//save
-		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
+		sprintf(tname,"samples/a%d/spintest_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
@@ -98,7 +101,7 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);	
 	
 		//save
-		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		sprintf(tname,"samples/a%d/spintest_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
@@ -108,7 +111,7 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
 		//save
-		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		sprintf(tname,"samples/a%d/spintest_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);

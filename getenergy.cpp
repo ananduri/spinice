@@ -1,8 +1,11 @@
 #include "spinice.h"
-
-double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* spinstated)
+//only for the initial energy calculation; after this, only get the deltas
+double getenergy(int N, double* intmat, bool* spinstate)
 {
-	//everytime call this guy, have to create+allocate spinstatei and over all the memory
+	double* spinstated = (double*)malloc(N*sizeof(double));
+	
+	double* inter = (double*)malloc(N*sizeof(double));
+	
 	for(int i=0;i<N;i++)
 	{
 		spinstated[i] = (spinstate[i]) ? 1.0 : -1.0; 
@@ -29,6 +32,9 @@ double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* 
 	{
 		sum2 +=	inter[i] * (2.0*spinstate[i] - 1.0);
 	}*/
+
+	free(inter);
+	free(spinstated);
 
 	return sum2;
 }

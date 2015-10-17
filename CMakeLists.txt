@@ -13,6 +13,6 @@ if (OPENMP_FOUND)
 endif()
 
 #Executables:
-add_executable(a main.cpp flipsingle.cpp evolve.cpp evolvesave.cpp
-getenergy.cpp mcstep.cpp mersenne.cpp)
+add_executable(a main.cpp easyflip.cpp evolve.cpp evolvesave.cpp
+mcstep.cpp mersenne.cpp)
 target_link_libraries(a ${MKL_LIBRARIES})

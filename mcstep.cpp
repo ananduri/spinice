@@ -1,28 +1,32 @@
 #include "spinice.h"
 
-double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate, double* energy) {
+double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T, bool* spinstate) {
 	
-	double counter=0;
-	int ind;
+	//int ind;
+
+	//double* spinstated = (double*)malloc(N*sizeof(double));
+
+	//double* inter = (double*)malloc(N*sizeof(double)); //allocate this guy once, outside this function?
+
+	//will eventually only use this line in evolve, maybe even only in main
+	//*energy = getenergy(N, intmat, spinstate, inter, spinstated); //initialize energy; from now on only do simple method to get it
+	//do this in evolve, actually; actually, do it in main
+	
 	int flip;
 
-	double* spinstated = (double*)malloc(N*sizeof(double));
-
-	double* inter = (double*)malloc(N*sizeof(double)); //allocate this guy once, outside this function?
-
-	*energy = getenergy(N, intmat, spinstate, inter, spinstated);
-
+	double counter=0;
 	for(int i=0;i<N;i++) 
 	{
-		ind = RanGen_mersenne.IRandom(0,N-1); //inclusive
+		//ind = RanGen_mersenne.IRandom(0,N-1); //inclusive //combine this into easyflip
 		
-		flip = flipsingle(N,RanGen_mersenne,ind,spinstate,intmat,T,energy, inter, spinstated);
+		//flip = flipsingle(N,RanGen_mersenne,ind,spinstate,intmat,T,energy,inter,spinstated);
+		flip = easyflip(N,RanGen_mersenne,spinstate,intmat,T);
 		
 		counter += flip;
 	}
 
-	free(inter);
-	free(spinstated);
+	//free(inter);
+	//free(spinstated);
 
 	return counter/N;
 }
