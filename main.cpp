@@ -119,6 +119,8 @@ int main(int argc, char *argv[])
 	free(intmat);
 
 	printf("cellsize: %d\n\n",cellsize);
+	printf("T: %.2f\n\n",T);
+	printf("step: %d\n\n",step);
 
 	end = omp_get_wtime();
 	printf("wall time: %5.3f\n",end-start);

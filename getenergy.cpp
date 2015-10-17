@@ -2,7 +2,7 @@
 
 double getenergy(int N, double* intmat, bool* spinstate, double* inter, double* spinstated)
 {
-	//everytime call this guy, have to create+allocate spinstatei and copy over all the memory
+	//everytime call this guy, have to create+allocate spinstatei and over all the memory
 	for(int i=0;i<N;i++)
 	{
 		spinstated[i] = (spinstate[i]) ? 1.0 : -1.0; 

@@ -11,7 +11,14 @@
 #include "randomc.h"
 #include "mkl.h"
 
-//const double schedule[] = {40, 
+inline double approxexp(double x)
+{
+	x = 1.0 + x/1024;
+	x*=x; x*=x; x*=x; x*=x;
+	x*=x; x*=x; x*=x; x*=x;
+	x*=x; x*=x;
+	return x;
+}
 
 //double calcacorr(int N, bool* initstate, bool* spinstate);
 

@@ -2,6 +2,8 @@
 
 bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spinstate, double* intmat, double T, double* energy, double* inter, double* spinstated)
 {
+	extern inline double approxexp(double);
+
 	double r,prob;
 	bool flipped = false;	
 
@@ -19,7 +21,7 @@ bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spin
 	{
 		r = RanGen_mersenne.Random();
 		
-		prob = exp(-(E1-E0)/T);
+		prob = approxexp(-(E1-E0)/T);
 
 		if(r < prob)
 		{
@@ -29,7 +31,6 @@ bool flipsingle(int N, CRandomMersenne& RanGen_mersenne, int spinind, bool* spin
 		{
 			spinstate[spinind] ^= true; //flip back
 		}
-
 	}
 	
 	*energy = (flipped) ? E1 : E0;
