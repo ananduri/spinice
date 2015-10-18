@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	double T = strtod(argv[4],NULL);	
 	int label = atoi(argv[5]);
 
-	int N = 16*cellsize*cellsize*cellsize;
+	int N = 4*cellsize*cellsize*cellsize;
 
 	double* intmat = (double*)malloc(N*N*sizeof(double));
 
