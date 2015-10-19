@@ -8,9 +8,7 @@ double mcstep(int N, CRandomMersenne& RanGen_mersenne, double* intmat, double T,
 
 	//double* inter = (double*)malloc(N*sizeof(double)); //allocate this guy once, outside this function?
 
-	//will eventually only use this line in evolve, maybe even only in main
 	//*energy = getenergy(N, intmat, spinstate, inter, spinstated); //initialize energy; from now on only do simple method to get it
-	//do this in evolve, actually; actually, do it in main
 	
 	int flip;
 

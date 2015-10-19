@@ -73,8 +73,6 @@ int main(int argc, char *argv[])
 
 
 	//EVOLVE DATA
-	//double energy = getenergy(N, intmat, timestate); 
-
 	FILE *tstream;
 	char tname[100];
 	
@@ -89,7 +87,7 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
 		//save
-		sprintf(tname,"samples/a%d/spintest_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
+		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
@@ -101,7 +99,7 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);	
 	
 		//save
-		sprintf(tname,"samples/a%d/spintest_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
@@ -111,7 +109,7 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
 		//save
-		sprintf(tname,"samples/a%d/spintest_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);

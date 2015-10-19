@@ -8,3 +8,8 @@
 *.out
 *.swp
 *.cpp.o
+update.txt
+debug
+release
+testcode
+reldebug
