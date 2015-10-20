@@ -7,15 +7,15 @@ void evolve(bool* state, int N, double* intmat, double temp, CRandomMersenne& Ra
 	int tau;
 	if(temp < 1.5)
 	{
-		tau = 300;
+		tau = 10000;
 	}
 	else if((temp >= 1.5) && (temp < 2.0))
 	{
-		tau = 80;
+		tau = 1000;
 	}
 	else
 	{
-		tau = 20;
+		tau = 100;
 	}
 
 	for(int i=0;i<tau;i++)	

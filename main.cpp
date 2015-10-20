@@ -39,18 +39,18 @@ int main(int argc, char *argv[])
 	bool* timestate = (bool*)calloc(S*N,sizeof(bool));
 	
 	//LOAD DATA
-	if(step == 0 && T >= 2.0) 
+	if(step == 0 && T >= 1.0) //changed to 1.0, it is now the reference point
 	{
 		for(int j=0;j<N;j++)
 		{
 			timestate[0*N + j] = (RanGen_mersenne.Random() > 0.5);
 		}
 	}
-	else if(step == 0 && T < 2.0) 
+	else if(step == 0 && T < 1.0) //changed to 1.0
 	{
 		FILE* istream;
 		char iname[100];
-		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.25,cellsize,label,step); //use 0.25 increment, hardcoded 
+		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.1,cellsize,label,step); //now using 0.1 increment, hardcoded 
 	
 		istream = fopen(iname,"rb");	
 		fseek(istream, -N*sizeof(bool), SEEK_END); 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 		fread(timestate, sizeof(bool), N, istream);
 		fclose(istream);
 	}
-	else
+	else //if step >= 1
 	{
 		FILE* istream;
 		char iname[100];
@@ -75,14 +75,27 @@ int main(int argc, char *argv[])
 	//EVOLVE DATA
 	FILE *tstream;
 	char tname[100];
-	
-	if(step == 0 && T >= 2.0)  
+
+	if(T > 2) //raise error message properly?
 	{
-		double dT = 0.5;
-		for (double temp=10;temp>=T;temp-=dT)
+		printf("Make T less than 2.0\n");
+		exit(1);
+	}
+	
+	double dT;
+	if(step == 0 && T >= 1.0) //changed to 1.0, assuming T !> 2
+	{
+		dT = 0.25;
+		for (double temp=10;temp>=2;temp-=dT)
 		{
 			evolve(timestate,N,intmat,temp,RanGen_mersenne);
 		}	
+
+		dT = 0.1;
+		for(double temp=2;temp>=T;temp-=dT)
+		{
+			evolve(timestate,N,intmat,temp,RanGen_mersenne);
+		}
 		
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
@@ -92,7 +105,7 @@ int main(int argc, char *argv[])
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
 	}
-	else if(step == 0 && T < 2.0) 
+	else if(step == 0 && T < 1.0) 
 	{
 		evolve(timestate,N,intmat,T,RanGen_mersenne);
 
@@ -104,7 +117,7 @@ int main(int argc, char *argv[])
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
 	}
-	else
+	else //if step >=1
 	{
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 

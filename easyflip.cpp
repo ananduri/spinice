@@ -9,6 +9,7 @@ bool easyflip(int N, CRandomMersenne& RanGen_mersenne, bool* spinstate, double* 
 
 	int ind = RanGen_mersenne.IRandom(0,N-1);
 
+	//interface with ewald here, for cellsize=12
 	double Ediff = 0;
 	for(int i=0; i<N; i++)
 	{
