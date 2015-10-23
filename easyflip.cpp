@@ -18,7 +18,7 @@ bool easyflip(int N, CRandomMersenne& RanGen_mersenne, bool* spinstate, double* 
 
 	Ediff += (spinstate[ind]) ? -intmat[ind*N + ind] : intmat[ind*N + ind];
 	Ediff *= (spinstate[ind]) ? -4 : 4; 
-	
+
 	if(Ediff < 0)
 	{
 		flipped = true;

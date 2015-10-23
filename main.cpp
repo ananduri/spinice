@@ -17,16 +17,42 @@ int main(int argc, char *argv[])
 	int S = atoi(argv[2]); //number of mc steps
 	int step = atoi(argv[3]); 
 	double T = strtod(argv[4],NULL);	
-	int label = atoi(argv[5]);
+	double Jdis = strtod(argv[5],NULL);
+	double Ddis = strtod(argv[6],NULL);
+	int label = atoi(argv[7]);
 
-	int N = 4*cellsize*cellsize*cellsize;
+	int real_cut,recip_cut;
+	if(cellsize==4)
+	{
+		real_cut = 10;
+		recip_cut = 6;
+	}
+	else if(cellsize==6)
+	{
+		real_cut = 12;
+		recip_cut = 4;
+	}
+	else
+	{
+		real_cut =3;
+		recip_cut = 10;
+	}
+
+	int N = 4*4*cellsize*cellsize*cellsize;
 
 	double* intmat = (double*)malloc(N*N*sizeof(double));
 
 	//load intmat
 	FILE *matstream;
 	char matname[50];
-	sprintf(matname,"Intmat_a%d_r3_k10.bin",cellsize);
+	if((Jdis != 0.0) && (Ddis != 0.0))
+	{
+		sprintf(matname,"IntMatdis_J%.2f_D%.2f_a%d_r%d_k%d.bin",Jdis,Ddis,cellsize,real_cut,recip_cut);
+	}
+	else
+	{
+		sprintf(matname,"IntMat_a%d_r%d_k%d.bin",cellsize,real_cut,recip_cut);
+	}
 
 	matstream = fopen(matname, "rb");
 	fread(intmat, sizeof(double), N*N, matstream);
@@ -46,11 +72,12 @@ int main(int argc, char *argv[])
 			timestate[0*N + j] = (RanGen_mersenne.Random() > 0.5);
 		}
 	}
-	else if(step == 0 && T < 1.0) //changed to 1.0
+	else if(step == 0 && T < 1.0) 
 	{
 		FILE* istream;
 		char iname[100];
-		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.1,cellsize,label,step); //now using 0.1 increment, hardcoded 
+		//sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T+0.1,cellsize,label,step); //now using 0.1 increment, hardcoded 
+		sprintf(iname,"samples/a%d/spinJ%.2fD%.2f_T%.2f_a%d_lab%d_step%d.bin",Jdis,Ddis,cellsize,T+0.1,cellsize,label,step); //now using 0.1 increment, hardcoded 
 	
 		istream = fopen(iname,"rb");	
 		fseek(istream, -N*sizeof(bool), SEEK_END); 
@@ -62,7 +89,8 @@ int main(int argc, char *argv[])
 	{
 		FILE* istream;
 		char iname[100];
-		sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step-1);
+		//sprintf(iname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step-1);
+		sprintf(iname,"samples/a%d/spinJ%.2fD%.2f_T%.2f_a%d_lab%d_step%d.bin",Jdis,Ddis,cellsize,T,cellsize,label,step-1); //now using 0.1 increment, hardcoded 
 	
 		istream = fopen(iname,"rb");	
 		fseek(istream, -N*sizeof(bool), SEEK_END); 
@@ -75,15 +103,27 @@ int main(int argc, char *argv[])
 	//EVOLVE DATA
 	FILE *tstream;
 	char tname[100];
+	double dT;
 
-	if(T > 2) //raise error message properly?
+	if(T > 2) //separate for quick high T runs
 	{
-		printf("Make T less than 2.0\n");
-		exit(1);
+		dT = 0.25;
+		for(double temp=1;temp>=2;temp-=dT)
+		{
+			evolve(timestate,N,intmat,temp,RanGen_mersenne);
+		}
+	
+		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
+
+		//save
+		//sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
+		sprintf(tname,"samples/a%d/spinJ%.2fD%.2f_T%.2f_a%d_lab%d_step%d.bin",Jdis,Ddis,cellsize,T,cellsize,label,step); 
+		tstream = fopen(tname,"wb");
+		fwrite(timestate,sizeof(bool),S*N,tstream);
+		fclose(tstream);
 	}
 	
-	double dT;
-	if(step == 0 && T >= 1.0) //changed to 1.0, assuming T !> 2
+	if(step == 0 && T >= 1.0)
 	{
 		dT = 0.25;
 		for (double temp=10;temp>=2;temp-=dT)
@@ -100,7 +140,8 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
 		//save
-		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
+		//sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step); 
+		sprintf(tname,"samples/a%d/spinJ%.2fD%.2f_T%.2f_a%d_lab%d_step%d.bin",Jdis,Ddis,cellsize,T,cellsize,label,step); 
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
@@ -112,7 +153,8 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);	
 	
 		//save
-		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		//sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		sprintf(tname,"samples/a%d/spinJ%.2fD%.2f_T%.2f_a%d_lab%d_step%d.bin",Jdis,Ddis,cellsize,T,cellsize,label,step); 
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);
@@ -122,7 +164,8 @@ int main(int argc, char *argv[])
 		evolvesave(timestate,N,intmat,T,RanGen_mersenne,S);
 
 		//save
-		sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		//sprintf(tname,"samples/a%d/spin_T%.2f_a%d_lab%d_step%d.bin",cellsize,T,cellsize,label,step);	
+		sprintf(tname,"samples/a%d/spinJ%.2fD%.2f_T%.2f_a%d_lab%d_step%d.bin",Jdis,Ddis,cellsize,T,cellsize,label,step); 
 		tstream = fopen(tname,"wb");
 		fwrite(timestate,sizeof(bool),S*N,tstream);
 		fclose(tstream);

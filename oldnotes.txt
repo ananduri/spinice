@@ -1,0 +1,56 @@
+Still should try and match J&H's results, also to make sure it's correct
+
+Should get some error bars
+
+analyze the difference between the data which is sort of equilibrated, and the data which is definitely equilibrated
+^^there actually is a difference, which perhaps raises the question of could
+it equilibrate more
+
+looks like two slopes, on the log-log plot of the log of acorr
+but should go to longer times? to verify this, since it looks like the second line starts at larger t
+longer times means another order of magnitude, so like 1000-3000
+wont make a difference to get state, but need to get fast autocorr calculation for this
+
+maybe that point happens further out for lower T
+maybe identifying where that happens, ie glassy behavior up to certain t which is a function of T, is interesting
+
+also could be a function of size; could be an artifact of simulation
+so we can try to extrapolate and say the real system does have glassy behavior
+^^in this case important to get cellsize=12 working
+
+wait, slope is actually DECREASING? or is it the two lines thing
+slope on log-log of log(-acorr) goes from ~0.7 to ~0.4. never near 1, seems to
+be decreasing with time
+
+really make the trend with each simulation parameter (size, T) clear
+
+decide what plots to look at. should be: 1. log(acorr), and 2. log-log of
+log(-acorr)
+
+actually there is a lower bound on the acorr, determined by the size of the
+system. goes as 1/N, for us, only trustworthy for greater than 10^-3
+actually, get confirmation on this
+
+
+seems I am seeing stretched exponential behavior, but IS IT RIGHT????
+
+only place could be wrong in MC code is in easyflip energy calculation
+(checked)
+
+or, the ewald calculation
+here the fact that real and rec are balancing across alpha tells us something
+and the code is simple now.
+Last thing: NN calculation. should i==j==k==0 indeed?
+If tiling the lattice in this way is ok, and FCC is still Bravais so it should
+be, then it is right. I've done all I can.
+
+
+Now efforts have to split up into 2 branches:
+--check if the code is right, done
+--prepare some stuff to show results clearly
+
+_______________________________________________________________________________________
+now redid ewald. dont see glassy behavior, ie it is simple exponential
+
+how to introduce impurities?
+variable couplings, of J or D? or both?

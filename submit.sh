@@ -6,4 +6,4 @@
 
 cd /home/ananduri/kmc
 
-prod/a $cellsize $S $step $T $SLURM_ARRAY_TASK_ID
+prod/a $cellsize $S $step $T $Jdis $Ddis $SLURM_ARRAY_TASK_ID
